@@ -12,6 +12,14 @@ static const char *fonts[] = {
 
 static char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 
+static const unsigned int baralpha = 0xd0;
+static const unsigned int borderalpha = OPAQUE;
+static const unsigned int alphas[][3]      = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+};
+
 static char normfgcolor[] = "#bbbbbb";
 static char normbgcolor[] = "#222222";
 static char selfgcolor[]  = "#eeeeee";
