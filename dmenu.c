@@ -990,7 +990,7 @@ setup(void)
 		y = topbar ? 0 : wa.height - mh;
 		mw = wa.width;
 	}
-	promptw = (prompt && *prompt) ? TEXTW(prompt) - lrpad / 4 : 0;
+	promptw = (prompt && *prompt) ? TEXTW(prompt) - lrpad / 4 + 4: 0;
 	inputw = mw / 5; /* input width: ~20% of monitor width */
 	match();
 
